@@ -1,9 +1,9 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import MainInquiring from "./components/MainInquiring";
-import MainWrite from "./components/MainWrite";
-import Nav from "./components/Nav";
-import "./assets/reset.css";
+import Footer from "pages/Footer";
+import Header from "pages/Header";
+import MainInquiring from "pages/MainInquiring";
+import MainWrite from "pages/MainWrite";
+import Nav from "pages/Nav";
+import "components/style/reset.css";
 
 function App() {
   return (
