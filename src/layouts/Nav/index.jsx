@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import * as N from "layouts/Nav/NavStyle";
-import Modal from "components/Modal";
-import MenuButton from "components/Button";
+import { useState } from "react";
+import styled from "styled-components";
 
 const Nav = ({ navTitle }) => {
   const [modal, setModal] = useState(false);
@@ -14,12 +12,21 @@ const Nav = ({ navTitle }) => {
 
   return (
     <N.Navbar>
-      <Link to="/spongebob">스폰지밥</Link>
-      <Link to="/patrick">뚱이</Link>
-      <MenuButton clickModalOpen={clickModalOpen} navTitle={navTitle} />
-      {modal === true ? <Modal /> : null}
+      <Button>스폰지밥</Button>
+      <Button>뚱이</Button>
+
+      {/* <MenuButton clickModalOpen={clickModalOpen} navTitle={navTitle} />
+      {modal === true ? <Modal /> : null} */}
     </N.Navbar>
   );
 };
+
+const Button = styled.button`
+  background-color: white;
+  border: 1px solid black;
+  color: #000;
+  padding: 0.5rem 2rem;
+  font-size: 15px;
+`;
 
 export default Nav;

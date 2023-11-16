@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
 import BodyImg from "assets/친구들집.jpg";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -131,8 +131,12 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-image: url(${BodyImg});
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
   }
   html {
+    height: 100%;
     font-size: 62.5%;
   }
   button {

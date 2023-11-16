@@ -1,21 +1,17 @@
-import Footer from "layouts/Footer";
+import GlobalStyle from "components/styles/GlobalStyle";
 import Home from "pages/Home";
-import NotFound from "pages/NotFound";
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="spongebob" element={<SpongebobPage />} />
-          <Route path="patrick" element={<PatrickPage />} />
-          <Route path="squidward" element={<SquidwardPage />} /> */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 
