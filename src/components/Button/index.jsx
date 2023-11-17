@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import * as M from "./MenuButtonStyle";
-import SquidwardImg from "assets/징징이.png";
 
-function MenuButton({ clickModalOpen }) {
+function MenuButton({ charactersMenu, clickModalOpen }) {
+  const [selectedCharacterId, setSelectedCharacterId] = useState(
+    charactersMenu[0].id
+  );
+
+  const clickChangeName = () => {
+    setSelectedCharacterId(charactersMenu.id);
+  };
+
   return (
-    <M.MenuBtnWrap>
-      <button onClick={clickModalOpen}>
-        <M.MenuBtnImg src={SquidwardImg} alt="징징이"></M.MenuBtnImg>
-      </button>
-    </M.MenuBtnWrap>
+    <>
+      {charactersMenu.map((menu) => {
+        return (
+          <M.MenuBtnWrap key={menu.id}>
+            <M.MenuBtnTitle>{menu.characterName}</M.MenuBtnTitle>
+            <button
+              onClick={() => {
+                clickChangeName();
+                clickModalOpen();
+              }}
+            >
+              <M.MenuBtnImg
+                src={menu.img}
+                alt={`${menu.characterName} 이미지`}
+              />
+            </button>
+          </M.MenuBtnWrap>
+        );
+      })}
+    </>
   );
 }
 

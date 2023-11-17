@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MenuBtnWrap = styled.div`
-  margin: 40em 0 0 20rem;
+  margin: 10rem 0 0 20rem;
   transition: 0.3s;
 `;
 
@@ -12,3 +12,5 @@ export const MenuBtnImg = styled.img`
     scale: calc(1.2);
   }
 `;
+
+export const MenuBtnTitle = styled.p``;

@@ -1,13 +1,17 @@
 import styled from "styled-components";
+import SpongebobLogo from "assets/images/스폰지밥로고.png";
 
 export const HeaderWrap = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35%;
-  height: 6rem;
+  width: 600px;
+  height: 500px;
   margin: 5rem auto 2rem auto;
-  background-color: var(--aqua-blue);
+  background-image: url(${SpongebobLogo});
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid red;
   border-radius: 70px;
 `;
 

@@ -11,7 +11,7 @@ export const ModalButton = styled.button`
 `;
 
 export const SquidWardImgTagWrap = styled.div`
-  margin: 40em 0 0 20rem;
+  margin: 2rem 0 0 20rem;
   transition: 0.3s;
 `;
 

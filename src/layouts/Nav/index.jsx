@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import * as N from "layouts/Nav/NavStyle";
 import Modal from "components/Modal";
 import MenuButton from "components/Button";
 
-const Nav = ({ navTitle }) => {
+const Nav = ({ charactersMenu }) => {
   const [modal, setModal] = useState(false);
 
   const clickModalOpen = () => {
@@ -14,9 +13,11 @@ const Nav = ({ navTitle }) => {
 
   return (
     <N.Navbar>
-      <Link to="/spongebob">스폰지밥</Link>
-      <Link to="/patrick">뚱이</Link>
-      <MenuButton clickModalOpen={clickModalOpen} navTitle={navTitle} />
+      <h1 style={{ fontSize: "10rem" }}>Copy</h1>
+      <MenuButton
+        clickModalOpen={clickModalOpen}
+        charactersMenu={charactersMenu}
+      />
       {modal === true ? <Modal /> : null}
     </N.Navbar>
   );

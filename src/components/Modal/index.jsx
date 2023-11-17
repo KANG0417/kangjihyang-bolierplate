@@ -2,7 +2,7 @@ import React from "react";
 import * as M from "components/Modal/ModalStyle";
 import { navTitle } from "pages/Home";
 
-function Modal({ title, setModal }) {
+function Modal({ setSelectedCharId }) {
   return (
     <>
       <M.ModalWrap>

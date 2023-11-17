@@ -1,3 +1,5 @@
+import GlobalColor from "components/styles/GlobalColor";
+import GlobalStyle from "components/styles/GlobalStyle";
 import Footer from "layouts/Footer";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
@@ -6,16 +8,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Router = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="spongebob" element={<SpongebobPage />} />
+    <>
+      <GlobalStyle />
+      <GlobalColor />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="spongebob" element={<SpongebobPage />} />
           <Route path="patrick" element={<PatrickPage />} />
           <Route path="squidward" element={<SquidwardPage />} /> */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 };
 
