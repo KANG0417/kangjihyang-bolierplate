@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "I AM A PLAYER";
+  font-weight: normal;
+  src: url("assets/fonts/IAMAPLAYER.woff2") format("font-woff2"),
+    url("assets/fonts/IAMAPLAYER.woff") format("font-woff"),
+    url("assets/fonts/I AM A PLAYER.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SDSwagger";
+  font-weight: normal;
+  font-style: normal;
+  src: url("assets/fonts/SDSwaggerTTF.woff2") format("woff2"),
+    url("assets/fonts/SDSwaggerTTF.woff") format("woff"),
+    url("assets/fonts/SDSwaggerTTF.ttf") format("truetype");
+  font-display: swap;
+}

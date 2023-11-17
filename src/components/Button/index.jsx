@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import * as M from "./MenuButtonStyle";
 
-function MenuButton({ charactersMenu, clickModalOpen }) {
-  const [selectedCharacterId, setSelectedCharacterId] = useState(
-    charactersMenu[0].id
-  );
-
+function MenuButton({
+  characterMenu,
+  clickModalOpen,
+  setSelectedCharacterId,
+  onMouseOver,
+}) {
   const clickChangeName = () => {
-    setSelectedCharacterId(charactersMenu.id);
+    setSelectedCharacterId(characterMenu.id);
   };
 
   return (
     <>
-      {charactersMenu.map((menu) => {
+      {characterMenu.map((menu) => {
         return (
-          <M.MenuBtnWrap key={menu.id}>
-            <M.MenuBtnTitle>{menu.characterName}</M.MenuBtnTitle>
-            <button
+          <M.MenuBtnWrap key={menu.id} onMouseOver={onMouseOver}>
+            <M.MenuBtn
               onClick={() => {
                 clickChangeName();
                 clickModalOpen();
@@ -26,7 +26,7 @@ function MenuButton({ charactersMenu, clickModalOpen }) {
                 src={menu.img}
                 alt={`${menu.characterName} 이미지`}
               />
-            </button>
+            </M.MenuBtn>
           </M.MenuBtnWrap>
         );
       })}

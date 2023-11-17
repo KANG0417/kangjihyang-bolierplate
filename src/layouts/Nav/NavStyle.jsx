@@ -6,30 +6,10 @@ export const Navbar = styled.nav`
   align-items: center;
 `;
 
-export const ModalButton = styled.button`
-  background-color: transparent;
-`;
-
-export const SquidWardImgTagWrap = styled.div`
-  margin: 2rem 0 0 20rem;
-  transition: 0.3s;
-`;
-
-export const SquidwardImgTag = styled.img`
-  width: 100px;
-  height: 150px;
-  ${SquidWardImgTagWrap}:hover & {
-    scale: calc(1.2);
-  }
-`;
-
-export const SquidwardImgTagTitle = styled.p`
-  background-color: var(--aqua-blue);
-  color: var(--white);
-  font-family: "Gowun Dodum";
+export const NavMessage = styled.p`
   font-size: 3rem;
-  z-index: 1;
-  ${SquidWardImgTagWrap}:hover & {
-    scale: calc(1.2);
-  }
+  margin: 0 0 0 80rem;
+  color: var(--yellow);
+  background-color: var(--blue);
+  width: 17%;
 `;

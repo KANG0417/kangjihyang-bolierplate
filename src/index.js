@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "reportWebVitals";
 import Router from "shared/Router";
-// import "components/styles/theme.css";
+import "components/styles/globalFont.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -3,23 +3,51 @@ import * as N from "layouts/Nav/NavStyle";
 import Modal from "components/Modal";
 import MenuButton from "components/Button";
 
-const Nav = ({ charactersMenu }) => {
+const Nav = ({ characterMenu }) => {
   const [modal, setModal] = useState(false);
+  const [selectedCharacterId, setSelectedCharacterId] = useState(
+    characterMenu[0].id
+  );
+  const [isHoveredCharacter, setIsHoveredCharacter] = useState(false);
+
+  const selectedCharacter = characterMenu.find(
+    (character) => character.id === selectedCharacterId
+  );
+
+  console.log(selectedCharacter);
 
   const clickModalOpen = () => {
-    console.log("모달창 오픈");
     setModal(true);
   };
 
+  const onMouseOver = () => {
+    setIsHoveredCharacter(true);
+  };
+
+  const onMouseLeave = () => {
+    setIsHoveredCharacter(false);
+  };
   return (
-    <N.Navbar>
-      <h1 style={{ fontSize: "10rem" }}>Copy</h1>
-      <MenuButton
-        clickModalOpen={clickModalOpen}
-        charactersMenu={charactersMenu}
-      />
-      {modal === true ? <Modal /> : null}
-    </N.Navbar>
+    <>
+      {isHoveredCharacter && <N.NavMessage>에게 메세지 보내기~!</N.NavMessage>}
+      <N.Navbar>
+        <MenuButton
+          clickModalOpen={clickModalOpen}
+          selectedCharacterId={selectedCharacterId}
+          setSelectedCharacterId={setSelectedCharacterId}
+          characterMenu={characterMenu}
+          isSelected={characterMenu.id === selectedCharacterId}
+          onMouseOver={onMouseOver}
+          onMouseLeave={onMouseLeave}
+        />
+        {modal === true ? (
+          <Modal
+            characterMenu={characterMenu}
+            selectedCharacter={selectedCharacter}
+          />
+        ) : null}
+      </N.Navbar>
+    </>
   );
 };
 
