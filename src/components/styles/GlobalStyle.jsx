@@ -32,7 +32,9 @@ const GlobalStyle = styled.createGlobalStyle`
   body {
     background-image: url(${BodyImg});
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
   }
   html {
     font-size: 62.5%;

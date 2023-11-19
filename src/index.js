@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import reportWebVitals from "reportWebVitals";
 import Router from "shared/Router";
 import "components/styles/globalFont.css";
+import Home from "pages/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router />
+    <Router>
+      <Home />
+    </Router>
   </React.StrictMode>
 );
 
